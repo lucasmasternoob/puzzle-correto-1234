@@ -1,4 +1,4 @@
-<script>
+
 var origem = 0;
 var destino = 0;
 var conteudoOrigem = "";
@@ -25,4 +25,4 @@ function mudar (click) {
         destino = 0
     }
 }
-</script>
+
