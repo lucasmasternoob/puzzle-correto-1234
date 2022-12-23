@@ -8,42 +8,7 @@
     <!-- <link rel="stylesheet" href="puzzle/style.css">
     <script src="puzzle/script.js"></script> -->
 </head>
-<style>
- #container{
-    width: 130px;
-    background-color: black;    
-    display: block;
-    text-align: center;
-    margin: auto;
-}   
 
-.tamanho{
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    position:relative;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-}
-
-.cor{
-    background-color: gray;
-}
-
-.cel{
-    width: 60px;
-    height: 60px;
-    position: center;
-    align-items: center;
-    justify-content: center;
-    
- }
- .tale{
-    text-align: center;
-    align-items: center;
- }
-</style>
 <body>
     <div id="container">
         <div id="d1" class="num1 tamanho cor tale" onClick="mudar(this)"><span class="cel">1</span></div>
@@ -51,36 +16,7 @@
         <div id="d3" class="num3 tamanho cor tale" onClick="mudar(this)"><span class="cel">3</span></div>
         <div id="d4" class="num4 tamanho cor tale" onClick="mudar(this)"><span class="cel">4</span></div>    
     </div>
-<script>
-var origem = 0;
-var destino = 0;
-var conteudoOrigem = "";
-var conteudoDestino = "";
 
-
-
-function mudar (click) {
-    if(origem == 0){
-        //SE ORIGEM IGUAL A 0 PEGA O VALOR DO PRIMEIRO ELEMENTO CLICADO
-        conteudoOrigem = click.innerHTML
-        origem = click
-    } else{
-        //SENÃO PEGA O VALOR DO SEGUNDO ELEMENTO CLICADO E ARMAZENA PARA A TROCA
-        conteudoDestino = click.innerHTML
-        destino = click
-    }
-    if(origem != 0 && destino != 0){
-        //SE ORIGEM E DESTINO DIFERENTES DE 0, ORIGEM RECEBE O CONTEUDO DESTINO E DESTINO RECEBE CONTEUDO ORIGEM ASSIM EFETUANDO A TROCA DE VALORES
-        //ORIGEM E DESTINO IGUALADOS A 0 PARA QUE RESETE APOS SER FEITA A PRIMEIRA TROCA.
-        origem.innerHTML = conteudoDestino
-        destino.innerHTML = conteudoOrigem
-        origem = 0
-        destino = 0
-    }
-}
-
-
-</script>
 
     
 </body>
